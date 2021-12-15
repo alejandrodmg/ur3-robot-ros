@@ -6,7 +6,7 @@ Place the following folders in a `catkin_ws/src` ROS workspace:
 - `my_ur3_reach`
 - `my_ur3_training`
 
-The folder openAI_ROS contains the `files/folders` we created and also the ones
+The folder `openAI_ROS` contains the `files/folders` we created and also the ones
 we modified to train the robot. In order to run experiments it's necessary
 to put the new files in the correct folders within the `openai_ros` package and 
 additionally replace those that were updated:
