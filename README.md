@@ -32,7 +32,7 @@ for your machine.
 
 ## Experiments
 
-**1) To move the robot to a certain position, execute the following commands 
+**1) Move the robot's arm to a certain position. Execute the following commands 
 in different terminal windows/tabs:**
 
 ```
@@ -49,7 +49,7 @@ in different terminal windows/tabs:**
 ~/catkin_ws$ roslaunch my_ur3_reach ur3_reach.launch
 ```
 
-**2) To train the robot using RL algorithms:**
+**2) Train the robot using RL algorithms:**
 
 **SARSA:**
 
