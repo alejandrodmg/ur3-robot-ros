@@ -5,8 +5,7 @@ import random
 class Sarsa:
 
     """
-    This SARSA implementation was provided for Lab 10.
-    @author: Unkown.
+    Simple SARSA implementation.
     """
 
     def __init__(self, actions, epsilon=0.1, alpha=0.2, gamma=0.9):

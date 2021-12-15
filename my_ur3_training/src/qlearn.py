@@ -5,7 +5,7 @@ import random
 class QLearn:
 
     """
-    This Q-Learning implementation was provided for Lab 10.
+    Simple Q-Learning implementation.
     @author: Victor Mayoral Vilches <victor@erlerobotics.com>
     """
 
