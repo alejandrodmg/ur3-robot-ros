@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find my_ur3_description)/config/ur3_gazebo.yaml" command="load"/>
+  <!-- Send robot urdf to param server -->
+  <param name="robot_description" command="$(find xacro)/xacro '$(find my_ur3_description)/robots/ur3_robot.urdf.xacro'" />
+  <!-- Push robot_description to factory and spawn robot in gazebo -->
+  <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model robot -z 0.3" respawn="false" output="screen" />
+  <!-- Controllers launch file -->
+  <include file="$(find my_ur3_description)/launch/ur3_controllers.launch"/>
+
+</launch>
+

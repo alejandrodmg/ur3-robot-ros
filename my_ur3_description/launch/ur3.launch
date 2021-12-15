@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <include file="$(find my_ur3_description)/launch/start_world.launch"/>
+  <include file="$(find my_ur3_description)/launch/put_robot_in_world.launch"/>
+
+</launch>

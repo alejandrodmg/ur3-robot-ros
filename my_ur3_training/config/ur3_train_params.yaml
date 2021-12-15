@@ -1,0 +1,10 @@
+ur3: #namespace
+  task_and_robot_environment_name: 'Ur3Position-v0'
+  ros_ws_abspath: "/home/alejandro/catkin_ws"
+  #parameters
+  alpha: 0.5
+  gamma: 0.9
+  epsilon: 0.1
+  epsilon_discount: 0.999
+  nepisodes: 100
+  nsteps: 40

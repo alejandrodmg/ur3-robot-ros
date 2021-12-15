@@ -1,0 +1,26 @@
+ur3: #namespace
+
+    # Task Realated parameters
+    n_actions: 6 # shoulder_pan_joint+/-,shoulder_lift_joint+/-,elbow_joint+/-
+    n_observations: 3
+
+    max_iterations: 40
+
+    init_pos:
+      shoulder_pan_joint: 0.0
+      shoulder_lift_joint: 0.0
+      elbow_joint: 0.0
+      wrist_1_joint: 0.0
+      wrist_2_joint: 0.0
+      wrist_3_joint: 0.0
+
+    goal_pos:
+      shoulder_pan_joint: 1.2
+      shoulder_lift_joint: -0.475
+      elbow_joint: 1.12
+
+
+    position_delta: 0.1 # Increments/Decrements in the positions each action step
+
+    reached_goal_reward: 100
+

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro"
+       name="ur3" >
+
+  <!-- common stuff -->
+  <xacro:include filename="$(find my_ur3_description)/robots/common.gazebo.xacro" />
+
+  <!-- ur3 -->
+  <xacro:include filename="$(find my_ur3_description)/robots/ur3.urdf.xacro" />
+
+  <!-- arm -->
+  <xacro:ur3 prefix="" joint_limited="false"/>
+
+  <link name="world" />
+
+  <joint name="world_joint" type="fixed">
+    <parent link="world" />
+    <child link = "base_link" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+
+</robot>

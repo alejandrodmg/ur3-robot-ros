@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+  <arg name="debug" default="false"/>
+  <arg name="gui" default="true"/>
+  <arg name="headless" default="false"/>
+  <arg name="pause" default="false"/>
+  <!-- startup simulated world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" default="worlds/empty.world"/>
+    <arg name="debug" value="$(arg debug)" />
+    <arg name="gui" value="$(arg gui)" />
+    <arg name="paused" value="$(arg pause)"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="headless" value="$(arg headless)"/>
+  </include>
+  <!-- Spawn tables and cube into Gazebo -->
+  <node name="spawn_pedestal" pkg="gazebo_ros" type="spawn_model" args="-file $(find my_ur3_description)/models/pedestal.urdf -urdf -model pedestal" />
+  <node name="spawn_table" pkg="gazebo_ros" type="spawn_model" args="-file $(find my_ur3_description)/models/table.urdf -urdf -y 0.5 -model table" />
+  <node name="spawn_cube" pkg="gazebo_ros"  type="spawn_model" args="-file $(find my_ur3_description)/models/cube.sdf -sdf -model cube -x 0.03 -y 0.385 -z 0.3" />
+
+</launch>
+

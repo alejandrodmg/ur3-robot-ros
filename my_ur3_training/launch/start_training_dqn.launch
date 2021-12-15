@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+  <!-- This version uses the openai_ros environments -->
+  <rosparam command="load" file="$(find my_ur3_training)/config/ur3_train_params.yaml" />
+  <!-- Launch the training system -->
+  <node pkg="my_ur3_training" name="ur3_dqn" type="start_training_dqn.py" output="screen"/>
+
+</launch>

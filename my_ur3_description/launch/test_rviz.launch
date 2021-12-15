@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <param name="robot_description" command="$(find xacro)/xacro '$(find my_ur3_description)/robots/ur3_robot.urdf.xacro'" />
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+    <param name="use_gui" value="true"/>
+  </node>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+  <!-- We didn't submit the rviz file as it's not required based on the assignment's spec file -->
+  <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find my_ur3_description)/rviz_config/ur3.rviz" /> -->
+
+  <node name="rviz" pkg="rviz" type="rviz" args="" />
+
+</launch>
